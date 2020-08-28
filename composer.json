@@ -2,7 +2,6 @@
     "name": "vladwork555/srt-parser",
     "description": "Easily Parse SRT Subtitle Files",
     "keywords": ["srt", "subtitles", "parser"],
-    "license": "DBAD",
     "authors": [
         {
             "name": "Ben Lippincott",
