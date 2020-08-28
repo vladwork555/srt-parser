@@ -8,7 +8,7 @@ Built by Ben Lippincott for [LiveTech](http://www.liveteched.com/)
 Installation / Requirements
 -
 Run 
-`composer require "benlipp/srt-parser"`
+`composer require "vladwork555/srt-parser"`
 and let Composer do the work.
 
 PHP 7+ is **REQUIRED**! This isn't amateur hour.  
