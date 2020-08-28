@@ -44,7 +44,7 @@ class Parser
     private static function splitData($data)
     {
         //find digits followed by a single line break and timestamps
-        $sections = preg_split('/\d+(?:\r\n|\r|\n)(?=(?:\d\d:\d\d:\d\d,\d\d\d)\s-->\s(?:\d\d:\d\d:\d\d,\d\d\d))/m', $data,-1,PREG_SPLIT_NO_EMPTY);
+        $sections = preg_split('/\d+(?:\r\n|\r|\n)(?=(?:\d+:\d+:\d+,\d+)\s-->\s(?:\d+:\d+:\d+,\d+))/m', $data,-1,PREG_SPLIT_NO_EMPTY);
         $matches = [];
         foreach ($sections as $section) {
             //cleans out control characters, borrowed from https://stackoverflow.com/a/23066553
@@ -71,7 +71,7 @@ class Parser
     private static function timeMatch($timeString)
     {
         $matches = [];
-        preg_match_all('/(\d\d:\d\d:\d\d,\d\d\d)\s-->\s(\d\d:\d\d:\d\d,\d\d\d)/', $timeString, $matches,
+        preg_match_all('/(\d+:\d+:\d+,\d+)\s-->\s(\d+:\d+:\d+,\d+)/', $timeString, $matches,
             PREG_SET_ORDER);
         $time = $matches[0];
 
